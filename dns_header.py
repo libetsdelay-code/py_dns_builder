@@ -43,3 +43,6 @@ def build_query(domain_name, record_type):
     header = DNSHeader(id=id, num_questions=1, flags=RECURSION) 
     question = DNSQuestion(name=name, type_=record_type, class_=1)
     return header_to_bytes(header) + question_to_bytes(question)
+
+
+print(encode_dns_name("google.com"))
